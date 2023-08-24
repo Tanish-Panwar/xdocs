@@ -1,0 +1,51 @@
+#container {
+  width: 60%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  margin: 10px auto 10px auto !important;
+}
+
+.ql-toolbar.ql-snow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: none;
+  outline: none;
+}
+
+
+
+.add_doc_input {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.plus-icon {
+  background: -webkit-linear-gradient(#9CECFB, #65C7F7, #0052D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Add this to your CSS file */
+.ql-pageBreak {
+  border-top: 1px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  page-break-before: always;
+}
+
+
+.gradientText {
+  background: -webkit-linear-gradient(#2c6cbc, #71c3f7, #f6f6f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
