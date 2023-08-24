@@ -8,7 +8,7 @@ const Connection = require('./database/db.js');
 const { getDocument, updateDocument } = require("./controller/document-controller.js");
 
 
-const MONGO_URL = process.env.MONGO_URL || "mongodb+srv://factknowledgeonly:1yK3MXiF4ONj8SRm@xdocs.bvpwuz0.mongodb.net/?retryWrites=true&w=majority";
+const MONGO_URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 9000
 
 Connection(MONGO_URL);
@@ -25,10 +25,6 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/document', require('./routes/documentRoutes'));
 
-
-if(process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'))
-}
 
 const httpServer = http.createServer(app);
 httpServer.listen(PORT, ()=> {

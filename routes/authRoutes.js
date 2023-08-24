@@ -27,7 +27,7 @@ router.post('/register', async (req, res) => {
                 id: user.id
             }
         }
-        const JWT_SECRET = "themostsecretkeythatcanprotectuser";
+        const JWT_SECRET = process.env.SALT;
         const authtoken = jwt.sign(data, JWT_SECRET);
         
         res.status(201).json({ authtoken: authtoken, user_id: user.id });
@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
                 id: user.id
             }
         }
-        const JWT_SECRET = "themostsecretkeythatcanprotectuser";
+        const JWT_SECRET = process.env.SALT;
         const authtoken = jwt.sign(data, JWT_SECRET);
         
         res.json({ authToken: authtoken, user_id: user.id });

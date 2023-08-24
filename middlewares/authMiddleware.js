@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../schema/User');
-const JWT_SECRET = "themostsecretkeythatcanprotectuser";
+const JWT_SECRET = process.env.SALT;
 
 const authMiddleware = async (req, res, next) => {
     try {
